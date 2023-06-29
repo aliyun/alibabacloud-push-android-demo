@@ -1,0 +1,42 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        mavenLocal()
+        // 配置HMS Core SDK的Maven仓地址。
+        maven {url 'https://developer.huawei.com/repo/'}
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+            name 'jcenter'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/google"
+            name 'google'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+            name 'aliyun'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url "http://nexus-ce.emas-poc.com/repository/maven-public/"
+            credentials {
+                username = "CenterExperience"
+                password = "77kkyy99"
+            }
+            allowInsecureProtocol = true
+        }
+    }
+}
+rootProject.name = "AliyunPushDemo"
+include ':app'

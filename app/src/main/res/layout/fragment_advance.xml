@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.advance.AdvanceFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/basic_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="@dimen/content_max_width_percent">
+
+            <LinearLayout
+                android:id="@+id/basic_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+
+                <TextView
+                    style="@style/AdvanceTitle"
+                    android:text="@string/device_tag" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/advance_device_tag_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_add_device_tag"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/add_tag"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconSize="16dp" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <include layout="@layout/common_divider" />
+
+                <TextView
+                    style="@style/AdvanceTitle"
+                    android:text="@string/config_account" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/advance_account_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_bound_account"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        app:closeIcon="@drawable/ic_close"
+                        app:closeIconSize="16dp"
+                        app:closeIconVisible="true" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_bind_account"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/bind_account"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconSize="16dp" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    style="@style/AdvanceTitle"
+                    android:text="@string/account_tag" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/advance_account_tag_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_add_account_tag"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/add_tag"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconSize="16dp" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <include layout="@layout/common_divider" />
+
+                <TextView
+                    style="@style/AdvanceTitle"
+                    android:text="@string/config_alias" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/advance_alias_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_add_alias"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/add_alias"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconSize="16dp" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <TextView
+                    style="@style/AdvanceTitle"
+                    android:text="@string/alias_tag" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/advance_alias_tag_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_add_alias_tag"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/add_tag"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconSize="16dp" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <include layout="@layout/common_divider" />
+
+                <TextView
+                    style="@style/AdvanceTitle"
+                    android:text="@string/sms_notify" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/advance_phone_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:chipSpacing="10dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_bound_phone"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        app:closeIcon="@drawable/ic_close"
+                        app:closeIconSize="16dp"
+                        app:closeIconVisible="true" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/advance_bind_phone"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/bind_phone"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconSize="16dp" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
