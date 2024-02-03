@@ -5,8 +5,8 @@ plugins {
 }
 
 gradle.ext {
-    pushVersion = '3.8.6'
-    thirdPushVersion = '3.8.6'
+    pushVersion = '3.8.8.1'
+    thirdPushVersion = '3.8.8'
 }
 
 android {
@@ -92,7 +92,7 @@ dependencies {
     api "com.aliyun.ams:alicloud-android-third-push-meizu:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-vivo:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-oppo:${gradle.thirdPushVersion}"
-    api "com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.6.1"
+    api "com.aliyun.ams:alicloud-android-third-push-xiaomi:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-huawei:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-honor:${gradle.thirdPushVersion}"
     api "com.aliyun.ams:alicloud-android-third-push-fcm:${gradle.thirdPushVersion}"
