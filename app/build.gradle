@@ -5,8 +5,8 @@ plugins {
 }
 
 gradle.ext {
-    pushVersion = '3.8.8.1'
-    thirdPushVersion = '3.8.8'
+    pushVersion = '3.9.0'
+    thirdPushVersion = '3.9.0'
 }
 
 android {

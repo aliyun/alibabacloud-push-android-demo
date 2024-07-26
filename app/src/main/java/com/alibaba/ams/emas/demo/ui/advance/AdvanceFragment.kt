@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.alibaba.ams.emas.demo.ui.IShowDialog
 import com.alibaba.sdk.android.push.CloudPushService
 import com.alibaba.sdk.android.push.CommonCallback
-import com.alibaba.sdk.android.tool.NetworkUtils
+//import com.alibaba.sdk.android.tool.NetworkUtils
 import com.aliyun.emas.pocdemo.R
 import com.aliyun.emas.pocdemo.databinding.FragmentAdvanceBinding
 import com.google.android.material.chip.Chip
@@ -78,19 +78,19 @@ class AdvanceFragment : Fragment(), IShowDialog {
         }
 
         binding.advanceBoundAccount.setOnCloseIconClickListener {
-            if (!NetworkUtils.isNetworkConnected(activity)) {
-                toast(getString(R.string.network_not_connect))
-            } else {
+//            if (!NetworkUtils.isNetworkConnected(activity)) {
+//                toast(getString(R.string.network_not_connect))
+//            } else {
                 viewModel.unbindAccount()
-            }
+//            }
         }
 
         binding.advanceBoundPhone.setOnCloseIconClickListener {
-            if (!NetworkUtils.isNetworkConnected(activity)) {
-                toast(getString(R.string.network_not_connect))
-            } else {
+//            if (!NetworkUtils.isNetworkConnected(activity)) {
+//                toast(getString(R.string.network_not_connect))
+//            } else {
                 viewModel.unbindPhone()
-            }
+//            }
         }
         return root
     }
@@ -231,10 +231,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun bindAccount() {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         val input = LayoutInflater.from(activity).inflate(R.layout.dialog_input, null)
         val editText = input.findViewById<AppCompatEditText>(R.id.add_input)
         editText.hint = getString(R.string.account_hint)
@@ -259,10 +259,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun addTag(target: Int) {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         val input = LayoutInflater.from(activity).inflate(R.layout.dialog_input, null)
         val editText = input.findViewById<AppCompatEditText>(R.id.add_input)
         editText.hint = getString(R.string.tag_hint)
@@ -323,10 +323,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun addAliasTag(alias: String) {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         val input = LayoutInflater.from(activity).inflate(R.layout.dialog_input, null)
         val editText = input.findViewById<AppCompatEditText>(R.id.add_input)
         editText.hint = getString(R.string.tag_hint)
@@ -350,10 +350,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun unbindDeviceTag(tag: String, view: View) {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         viewModel.removeDeviceTag(tag, object : CommonCallback {
             override fun onSuccess(response: String?) {
                 //remove view
@@ -372,10 +372,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun unbindAccountTag(tag: String, view: View) {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         viewModel.removeAccountTag(tag, object : CommonCallback {
             override fun onSuccess(response: String?) {
                 //remove view
@@ -394,10 +394,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun unbindAliasTag(tag: String, alias: String, view: View) {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         viewModel.removeAliasTag(tag, alias, object : CommonCallback {
             override fun onSuccess(response: String?) {
                 //remove view
@@ -417,10 +417,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
 
     private fun addAlias() {
 
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
 
         val input = LayoutInflater.from(activity).inflate(R.layout.dialog_input, null)
         val editText = input.findViewById<AppCompatEditText>(R.id.add_input)
@@ -446,10 +446,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
     }
 
     private fun removeAlias(alias: String, view: View) {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         viewModel.removeAlias(
             alias,
             object : CommonCallback {
@@ -472,10 +472,10 @@ class AdvanceFragment : Fragment(), IShowDialog {
 
 
     private fun bindPhoneNumber() {
-        if (!NetworkUtils.isNetworkConnected(activity)) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(activity)) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         val input = LayoutInflater.from(activity).inflate(R.layout.dialog_input, null)
         val editText = input.findViewById<AppCompatEditText>(R.id.add_input)
         editText.hint = getString(R.string.phone_hint)
