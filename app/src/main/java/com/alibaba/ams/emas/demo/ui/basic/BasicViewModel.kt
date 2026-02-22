@@ -16,7 +16,7 @@ import com.alibaba.ams.emas.demo.SingleLiveData
 import com.alibaba.sdk.android.push.CloudPushService
 import com.alibaba.sdk.android.push.CommonCallback
 import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory
-import com.alibaba.sdk.android.tool.NetworkUtils
+//import com.alibaba.sdk.android.tool.NetworkUtils
 import com.aliyun.emas.pocdemo.R
 import kotlinx.coroutines.launch
 
@@ -70,9 +70,9 @@ class BasicViewModel(
     }
 
     fun checkPushStatus() {
-        if (!NetworkUtils.isNetworkConnected(getApplication())) {
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(getApplication())) {
+//            return
+//        }
         cloudPushService.checkPushChannelStatus(object : CommonCallback {
             override fun onSuccess(response: String?) {
                 pushChannelOpenedData.value = true
@@ -86,10 +86,10 @@ class BasicViewModel(
 
 
     fun registerPush() {
-        if (!NetworkUtils.isNetworkConnected(getApplication())) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(getApplication())) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         cloudPushService.register(getApplication(), object : CommonCallback {
             override fun onSuccess(response: String?) {
                 Toast.makeText(
@@ -112,10 +112,10 @@ class BasicViewModel(
 
 
     fun openPush() {
-        if (!NetworkUtils.isNetworkConnected(getApplication())) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(getApplication())) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         cloudPushService.turnOnPushChannel(object : CommonCallback {
             override fun onSuccess(response: String?) {
                 pushChannelOpenedData.value = true
@@ -140,10 +140,10 @@ class BasicViewModel(
     }
 
     fun closePush() {
-        if (!NetworkUtils.isNetworkConnected(getApplication())) {
-            toast(getString(R.string.network_not_connect))
-            return
-        }
+//        if (!NetworkUtils.isNetworkConnected(getApplication())) {
+//            toast(getString(R.string.network_not_connect))
+//            return
+//        }
         cloudPushService.turnOffPushChannel(object : CommonCallback {
             override fun onSuccess(response: String?) {
                 pushChannelOpenedData.value = false
